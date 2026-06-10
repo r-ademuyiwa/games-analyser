@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: precommit
+        name: nox pre-commit
+        entry: nox -s precommit
+        language: system
+        pass_filenames: false
