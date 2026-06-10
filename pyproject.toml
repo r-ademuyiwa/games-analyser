@@ -1,13 +1,14 @@
 [project]
-name = "placeholder_project_name"
+name = "games-analyser"
 version = "0.0.1"
-description = "Your project description here"
+description = "Desining a program that analyses every teams regular season games and finding patterns in winner and loosers to predict the winner over a 7 game series."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Ridwan Ademuyiwa", email = "ridwanade@hotmail.com" }]
 dependencies = [
   # dependencies go here
+  "nba_api"
 ]
 
 [dependency-groups]
@@ -52,6 +53,10 @@ exclude = [
   "noxfile.py",
   "tests/*",
 ]
+
+[[tool.mypy.overrides]]
+module = ["nba_api", "nba_api.*"]
+ignore_missing_imports = true
 
 [tool.ruff]
 line-length = 120
