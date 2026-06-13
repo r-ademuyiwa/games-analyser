@@ -38,6 +38,10 @@ omit = [
   # add other files or directories to omit from coverage here
 ]
 
+[tool.isort]
+profile = "black"
+line_length = 120
+
 [tool.mypy]
 check_untyped_defs = true
 disallow_incomplete_defs = true
